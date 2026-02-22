@@ -891,6 +891,176 @@ button { padding: 10px 24px; border: none; border-radius: 30px; cursor: pointer;
     color: #888;
 }
 
+/* --- Promotions Section --- */
+.promotions-section {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+}
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+.promo-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(183, 110, 121, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+}
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(183, 110, 121, 0.25);
+}
+.promo-card.featured {
+    border: 3px solid var(--rose-gold);
+    transform: scale(1.05);
+}
+.promo-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+.promo-image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+.promo-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--rose-gold) 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(183, 110, 121, 0.4);
+}
+.promo-badge.hot {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.promo-content {
+    padding: 2rem;
+}
+.promo-content h3 {
+    color: var(--rose-gold);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+.promo-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.promo-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.3rem;
+}
+.special-price {
+    color: var(--sage-green);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.promo-valid {
+    color: var(--rose-gold);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.promo-valid::before {
+    content: '⏰';
+}
+
+/* --- Refreshments Section --- */
+.refreshments-section {
+    background: white;
+}
+.refreshments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+.refreshment-category {
+    background: linear-gradient(135deg, #fff9fa 0%, #ffffff 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(183, 110, 121, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.refreshment-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(183, 110, 121, 0.2);
+    border-color: var(--soft-pink);
+}
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--rose-gold) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 8px 20px rgba(183, 110, 121, 0.3);
+}
+.refreshment-category h3 {
+    color: var(--rose-gold);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-item {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: white;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.menu-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(183, 110, 121, 0.1);
+}
+.menu-name {
+    display: block;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+.menu-desc {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 968px) {
     .nav-menu {
@@ -941,7 +1111,9 @@ button { padding: 10px 24px; border: none; border-radius: 30px; cursor: pointer;
     }
     .treatment-grid,
     .pricing-grid,
-    .testimonials-grid {
+    .testimonials-grid,
+    .promotions-grid,
+    .refreshments-grid {
         grid-template-columns: 1fr;
     }
     .gallery-grid {
@@ -965,5 +1137,19 @@ button { padding: 10px 24px; border: none; border-radius: 30px; cursor: pointer;
     }
     .contact-details p {
         font-size: 0.95rem;
+    }
+    .promo-card.featured {
+        transform: scale(1);
+    }
+    .promo-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    .category-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    .refreshment-category {
+        padding: 1.5rem;
     }
 }
