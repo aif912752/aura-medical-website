@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Medical Aesthetics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@400;600&family=Prompt:wght@300;400;500;600&subset=thai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Aura Medical</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">หน้าแรก</a>
+                <a href="#about" class="nav-link">เกี่ยวกับเรา</a>
+                <a href="#services" class="nav-link">บริการ</a>
+                <a href="#results" class="nav-link">ผลงาน</a>
+                <a href="#pricing" class="nav-link">ราคา</a>
+                <a href="#testimonials" class="nav-link">รีวิว</a>
+                <a href="#faq" class="nav-link">คำถาม</a>
+                <a href="#contact" class="nav-link">ติดต่อ</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80" alt="Beautiful woman with glowing skin" class="hero-bg-img">
+        </div>
+        <div class="hero-content">
+            <div class="floating-element leaf-1"></div>
+            <div class="floating-element leaf-2"></div>
+            
+            <div class="reveal-text-container" id="hero-text">
+                </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">เกี่ยวกับ Aura Medical</h2>
+                <p class="about-text">
+                    Aura Medical Aesthetics เป็นคลินิกความงามชั้นนำที่มุ่งมั่นให้บริการดูแลผิวหน้าและรูปลักษณ์
+                    ด้วยเทคโนโลยีที่ทันสมัยและทีมแพทย์ผู้เชี่ยวชาญ เราพร้อมช่วยให้คุณมีผิวที่สวยงาม
+                    อ่อนเยาว์ และมีสุขภาพดีอย่างเป็นธรรมชาติ
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">ลูกค้าที่ไว้วางใจ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">ปีประสบการณ์</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">บริการความงาม</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">ความพึงพอใจ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=80" alt="About Aura Medical" class="about-img-real">
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Results -->
+    <section class="section-padding" id="results">
+        <h2 class="section-title">Real Results</h2>
+        <p class="section-subtitle">เลื่อนดูผลลัพธ์ก่อนและหลังทำ - ผลลัพธ์จริงจากลูกค้า</p>
+
+        <div class="ba-container">
+            <!-- Real Before/After Images -->
+            <div class="ba-image img-before" style="background-image: url('image/Before.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="ba-image img-after" id="after-img" style="background-image: url('image/After.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="ba-divider" id="ba-divider"></div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider" id="ba-slider">
+
+            <div class="ba-label label-before" id="label-before">ก่อน</div>
+            <div class="ba-label label-after" id="label-after">หลัง</div>
+        </div>
+
+        <!-- Additional Before/After Examples -->
+        <div class="ba-examples" style="margin-top: 4rem;">
+            <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">ตัวอย่างผลลัพธ์เพิ่มเติม</h3>
+            <div class="ba-grid">
+                <div class="ba-item">
+                    <div class="ba-item-images">
+                        <div class="ba-item-before" style="background-image: url('image/Before.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="ba-item-after" style="background-image: url('image/After.jpg'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="ba-item-label">Botox Treatment</div>
+                </div>
+                <div class="ba-item">
+                    <div class="ba-item-images">
+                        <div class="ba-item-before" style="background-image: url('image/Before.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="ba-item-after" style="background-image: url('image/After.jpg'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="ba-item-label">Skin Rejuvenation</div>
+                </div>
+                <div class="ba-item">
+                    <div class="ba-item-images">
+                        <div class="ba-item-before" style="background-image: url('image/Before.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="ba-item-after" style="background-image: url('image/After.jpg'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="ba-item-label">Facial Treatment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding" id="services" style="background-color: var(--pure-white);">
+        <h2 class="section-title">Our Premium Services</h2>
+        <div class="treatment-grid">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <h3>Botox</h3>
+                <p>ลดเลือนริ้วรอย คืนความอ่อนเยาว์อย่างเป็นธรรมชาติ</p>
+                <span class="card-arrow">Discover ➔</span>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <h3>Dermal Fillers</h3>
+                <p>เติมเต็มมิติให้ใบหน้า ดูละมุนและมีเสน่ห์ยิ่งขึ้น</p>
+                <span class="card-arrow">Discover ➔</span>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <h3>Laser Therapy</h3>
+                <p>เผยผิวใสไร้จุดด่างดำ ด้วยเทคโนโลยีเลเซอร์ล้ำสมัย</p>
+                <span class="card-arrow">Discover ➔</span>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <h3>HIFU</h3>
+                <p>ยกกระชับผิวหน้า ไม่ต้องผ่าตัด ผลลัพธ์ชัดเจน</p>
+                <span class="card-arrow">Discover ➔</span>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <h3>Thread Lift</h3>
+                <p>ยกร่องหน้า ปรับรูปหน้า ดูหน้าเด็กลง</p>
+                <span class="card-arrow">Discover ➔</span>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <h3>Skin Booster</h3>
+                <p>ฟิลเลอร์บำรุงผิว ให้ผิวใส ชุ่มชื้น อิ่มน้ำ</p>
+                <span class="card-arrow">Discover ➔</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding pricing-section" id="pricing">
+        <h2 class="section-title">ราคาแพ็กเกจ</h2>
+        <p class="section-subtitle">เลือกแพ็กเกจที่เหมาะกับคุณ</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-badge">Basic</div>
+                <div class="pricing-price">฿2,900</div>
+                <div class="pricing-period">ต่อครั้ง</div>
+                <ul class="pricing-features">
+                    <li>✓ Botox 1 โซน</li>
+                    <li>✓ ปรึกษาฟรี</li>
+                    <li>✓ ติดตามผล</li>
+                    <li class="feature-disabled">✕ ฟรีแพ็กเกจบำรุง</li>
+                    <li class="feature-disabled">✕ ส่วนลด 10%</li>
+                </ul>
+                <button class="pricing-btn btn-basic">เลือกแพ็กเกจ</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge popular">Most Popular</div>
+                <div class="pricing-price">฿9,900</div>
+                <div class="pricing-period">แพ็กเกจ</div>
+                <ul class="pricing-features">
+                    <li>✓ Botox 3 โซน</li>
+                    <li>✓ Filler 1 เข็ม</li>
+                    <li>✓ ปรึกษาฟรี</li>
+                    <li>✓ ติดตามผล</li>
+                    <li>✓ ฟรีแพ็กเกจบำรุง</li>
+                </ul>
+                <button class="pricing-btn btn-popular">เลือกแพ็กเกจ</button>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">Premium</div>
+                <div class="pricing-price">฿29,900</div>
+                <div class="pricing-period">แพ็กเกจ VIP</div>
+                <ul class="pricing-features">
+                    <li>✓ Botox ทั้งหน้า</li>
+                    <li>✓ Filler 3 เข็ม</li>
+                    <li>✓ HIFU 1 ครั้ง</li>
+                    <li>✓ ปรึกษาฟรีตลอดชีพ</li>
+                    <li>✓ ส่วนลด 15%</li>
+                </ul>
+                <button class="pricing-btn btn-premium">เลือกแพ็กเกจ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section with Doctor -->
+    <section class="section-padding trust-section">
+        <div class="doctor-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=80" alt="Doctor" class="doctor-img-real">
+            <div class="badge">Board<br>Certified</div>
+        </div>
+        <div>
+            <h2 class="section-title" style="text-align: left;">Expert Care You Can Trust</h2>
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.6; max-width: 500px;">
+                ดูแลโดยแพทย์ผู้เชี่ยวชาญเฉพาะทางด้านผิวหนัง ที่ได้รับความไว้วางใจจากลูกค้ากว่าหมื่นเคส
+            </p>
+            <div class="stars-container" id="review-stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding testimonials-section" id="testimonials">
+        <h2 class="section-title">รีวิวจากลูกค้า</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">
+                    "บริการดีมากค่ะ แพทย์ให้คำแนะนำได้ถูกต้อง เห็นผลชัดเจนตั้งแต่ครั้งแรก
+                    จะกลับมาใช้บริการอีกแน่นอน"
+                </p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Customer" class="author-avatar-img">
+                    <div class="author-info">
+                        <div class="author-name">คุณสายใจ</div>
+                        <div class="author-service">Botox Treatment</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">
+                    "ประทับใจมากครับ ทีมงานเป็นกันเอง รักษาความสะอาด
+                    ผลลัพธ์เกินคาด หน้าดูอ่อนเยาว์ขึ้นเห็นได้ชัด"
+                </p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Customer" class="author-avatar-img">
+                    <div class="author-info">
+                        <div class="author-name">คุณวิชัย</div>
+                        <div class="author-service">Dermal Fillers</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">
+                    "เคยทำที่หลายที่แล้ว แต่ที่นี่คือดีที่สุด แพทย์มีประสบการณ์สูง
+                    ให้คำปรึกษาดีมาก ราคาเป็นธรรม"
+                </p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80" alt="Customer" class="author-avatar-img">
+                    <div class="author-info">
+                        <div class="author-name">คุณนภา</div>
+                        <div class="author-service">Laser Therapy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding gallery-section">
+        <h2 class="section-title">Gallery ผลงาน</h2>
+        <p class="section-subtitle">ดูตัวอย่างผลงานของเรา</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&auto=format&fit=crop&q=80" alt="Botox" class="gallery-img-real">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Botox Treatment</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&auto=format&fit=crop&q=80" alt="Dermal Fillers" class="gallery-img-real">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Dermal Fillers</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&auto=format&fit=crop&q=80" alt="Laser Therapy" class="gallery-img-real">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Laser Therapy</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&auto=format&fit=crop&q=80" alt="HIFU" class="gallery-img-real">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">HIFU</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&auto=format&fit=crop&q=80" alt="Thread Lift" class="gallery-img-real">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Thread Lift</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop&q=80" alt="Skin Booster" class="gallery-img-real">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Skin Booster</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding faq-section" id="faq">
+        <h2 class="section-title">คำถามที่พบบ่อย</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>บอท็อกซ์เห็นผลเมื่อไหร่?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    บอท็อกซ์จะเริ่มเห็นผลภายใน 3-7 วัน และจะเห็นผลชัดเจนที่สุดที่ 2 สัปดาห์
+                    ผลลัพธ์จะอยู่ได้นาน 4-6 เดือน ขึ้นอยู่กับสภาพผิวแต่ละบุคคล
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ทำ Filler เจ็บไหม?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    ก่อนทำจะมีการแปะยาชาก่อน ทำให้ระหว่างทำไม่เจ็บมาก
+                    รู้สึกตึงๆ เล็กน้อยเท่านั้น ใช้เวลาไม่นานประมาณ 30-45 นาที
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>หลังทำ HIFU ต้องพักฟื้นนานแค่ไหน?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    HIFU เป็นการรักษาที่ไม่ต้องผ่าตัด ไม่ต้องพักฟื้น
+                    สามารถทำกิจกรรมประจำวันได้ตามปกติทันทีหลังทำ
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>มีข้อควรระวังหลังทำบริการ?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    - หลีกเลี่ยงการนอนคว่ำใน 6 ชั่วโมงแรก
+                    - งดออกกำลังกายหนัก 1 วัน
+                    - งดดื่มแอลกอฮอล์ 24 ชั่วโมง
+                    - หลีกเลี่ยงความร้อนและแสงแดด
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>แพ็กเกจไหนเหมาะกับฉัน?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    แนะนำให้มาปรึกษาแพทย์ของเราฟรี เพื่อวิเคราะห์ปัญหาผิว
+                    และแนะนำแพ็กเกจที่เหมาะสมที่สุดกับสภาพผิวและงบประมาณของคุณ
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding contact-section" id="contact">
+        <h2 class="section-title">ติดต่อเรา</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-details">
+                        <h3>ที่อยู่</h3>
+                        <p>123 สุขุมวิท 23 ถนนสุขุมวิท<br>กรุงเทพมหานคร 10110</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="contact-details">
+                        <h3>โทรศัพท์</h3>
+                        <p>02-123-4567<br>089-123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-details">
+                        <h3>เวลาทำการ</h3>
+                        <p>จันทร์ - เสาร์: 10:00 - 20:00<br>อาทิตย์: 11:00 - 18:00</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <h3>อีเมล</h3>
+                        <p>info@auramedical.co.th<br>LINE: @auramedical</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-map">
+                <div class="map-placeholder">
+                    <div class="map-icon"><i class="fas fa-map"></i></div>
+                    <p>Google Maps Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Aura Medical</h3>
+                <p class="footer-desc">
+                    คลินิกความงามที่คุณไว้วางใจ<br>
+                    ดูแลโดยแพทย์ผู้เชี่ยวชาญ
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LINE</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">บริการของเรา</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Botox</a></li>
+                    <li><a href="#services">Dermal Fillers</a></li>
+                    <li><a href="#services">Laser Therapy</a></li>
+                    <li><a href="#services">HIFU</a></li>
+                    <li><a href="#services">Thread Lift</a></li>
+                    <li><a href="#services">Skin Booster</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">เมนูลัด</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">เกี่ยวกับเรา</a></li>
+                    <li><a href="#pricing">ราคาแพ็กเกจ</a></li>
+                    <li><a href="#testimonials">รีวิว</a></li>
+                    <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+                    <li><a href="#contact">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">ติดต่อเรา</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 สุขุมวิท 23 กรุงเทพฯ</li>
+                    <li><i class="fas fa-phone-alt"></i> 02-123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@auramedical.co.th</li>
+                    <li><i class="fas fa-clock"></i> จันทร์-เสาร์ 10:00-20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aura Medical Aesthetics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
