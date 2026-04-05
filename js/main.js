@@ -31,7 +31,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// 2. Navbar Scroll Effect
+// 2. Navbar Scroll Effect with Enhanced Styling
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -180,3 +180,117 @@ faqItems.forEach(item => {
         item.classList.toggle('active');
     });
 });
+
+// 9. Intersection Observer for Scroll Animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all cards and elements with animation
+document.querySelectorAll('.card, .ba-item, .testimonial-card, .pricing-card, .promo-card, .gallery-item, .refreshment-category, .contact-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    scrollObserver.observe(el);
+});
+
+// 10. Parallax Effect on Scroll
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-bg-img');
+    
+    parallaxElements.forEach(element => {
+        element.style.transform = `translateY(${scrolled * 0.5}px)`;
+    });
+});
+
+// 11. Enhanced Button Ripple Effect
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+
+// 12. Add Hover Glow Effect to Cards
+document.querySelectorAll('.card, .pricing-card, .promo-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+    });
+});
+
+// 13. Animate Stats on Scroll
+const statsItems = document.querySelectorAll('.stat-item');
+if (statsItems.length > 0) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumber = entry.target.querySelector('.stat-number');
+                if (statNumber && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    animateCounter(statNumber);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statsItems.forEach(item => statsObserver.observe(item));
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.textContent.replace(/[^0-9]/g, ''));
+    const duration = 2000;
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const counter = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = element.textContent.replace(/[0-9]+/, target);
+            clearInterval(counter);
+        } else {
+            element.textContent = element.textContent.replace(/[0-9]+/, Math.floor(current));
+        }
+    }, 16);
+}
+
+// 14. Add Floating Animation to Service Cards
+document.querySelectorAll('.card').forEach((card, index) => {
+    card.style.animationDelay = (index * 0.1) + 's';
+});
+
+// 15. Smooth Color Transition on Scroll
+window.addEventListener('scroll', () => {
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    document.documentElement.style.setProperty('--scroll-percent', scrollPercent + '%');
+});
+
+console.log('✨ Aura Medical - All animations loaded successfully!');
